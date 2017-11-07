@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html>;      
 <html>
     <head>
         <meta charset="utf-8">
@@ -8,26 +8,80 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
+        <link rel="stylesheet" href="tp2.css" />
+        <script type="text/javascript" src="tp2.js"></script>
+       
+    
         <style>
-          body{
-              background-color: #e9ebee;              
+
+            body{
+              background-color:#FDA89F;      
               font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
               font-size: 16px;
               margin: 0 auto;
-              max-width: 800px;              
-          }
+              max-width: 500px;  
+                }
+
+            table {
+              width: 100%;
+                  }
+                        h1 { 
+              text-align : center;
+               }
+
+            table, th, td {
+              border: 0px solid black;
+              border-collapse: collapse;
+                          }
+            input { WIDTH : 200px;}
         </style>
         
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="js/main.js"></script>-->
     </head>
+
     <body>        
-        <h1>tp2</h1>
+        <h1>Tp2</h1>
         <!-- Add your site or application content here -->
         <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
+     
+
+        <h1>Saisie d'une fiche "Personne"</h1>
+               <form id ="myform" method="post" action="tp2.js">
+        
+                <table>
+                    <tr>
+                        <td><label for="nom">Nom</label></td>
+                        <td><input type="text" name="nom" id="nom" placeholder="Entrez votre nom " minlength="5" maxlength="20"/></td>
+                    </tr>  
+
+                    <tr>
+                        <td><label for="prenom">Prénom</label></td>
+                        <td><input type="text" name="prenom" id="prenom" placeholder="Entrez votre prenom "  minlength="5" maxlength="20"/></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="date">Date de naissance</label></td>
+                        <td><input type="date" name="date" id="date" minlength="5" maxlength='20'/></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="adresse">Adresse</label></td>
+                        <td><input type="text" name="adresse" id="adresse" placeholder="Entrez votre adresse" minlength="5" maxlength="50"/></td>
+                    </tr>
+                            
+                    <tr>
+                        <td><label for="mail">Mail</label></td>
+                        <td><input type="email" name="mail" id="mail" placeholder="Exemple@monde.com" minlength="5" maxlength="50"/></td>
+                    </tr>   
+
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Valider" onclick="validation()"/></td>
+                    </tr>
+                </table>
+            </form>
+            
+            <tp2 id="error" hidden></tp2>
+            <tp2 id="resultat" hidden></tp2>
     </body>
+
 </html>
