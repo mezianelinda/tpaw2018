@@ -22,4 +22,6 @@
 
 label[for="nom"]{font-size:em}
 
-#valider : 200
+#valider {
+    width:60 px;
+}
